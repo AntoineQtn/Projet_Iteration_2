@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Itération 2 JavaScript Page d'Accueil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
+        <!--création d'un menu déroulant pour accéder aux pages gallery et jeu-->
+        <form>
+            <label for="Pages">Navigation</label>
+            <select id="Pages" name="Pages">
+                <option value="Gallery">Galley</option>
+                <option value="Jeux">jeux</option>
+            </select>
+        </form>
+        <!--Titre du site-->
+        <h1>Provisoire</h1>
+        <!--Logo du site-->
+        <img src="">
+        <!--bouton de connexion, renvoi vers un formulaire d'identification-->
+        <a href="connexion.html">
+            <button type="button">Se connecter</button>
+        </a>
     </header>
+    <!--création du formulaire de post avec bouton publier et bouton suppression ; 
+création d'une section accueillant les informations de l'API avec une zone de texte et une photo-->
     <main>
-    
+        <h1>Liste des brasseries</h1>
+  <div id="content" class="card-container"></div>
     </main>
+
     <footer>
-        
+        <button type="button"></button>
+        <img src="">
     </footer>
+    <script src="Projet_Iteration_2.js"></script>
+
 </body>
+
 </html>
