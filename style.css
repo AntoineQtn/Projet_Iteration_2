@@ -12,7 +12,7 @@ header.form{
   border: 1px solid #090b1b;
   color: #a51919;
 }
-dropdown {
+.dropdown {
   position: relative;
   display: inline-block;
 }
@@ -57,14 +57,46 @@ main {
   border: 1px solid #a32404;
 }
 
-#Brewery{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #04a39b;
+brewery-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
+.brewery-card h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.brewery-card p {
+  margin: 8px 0;
+}
+
+.brewery-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.brewery-card a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  
+    background-color: #1a311b;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  
+}
 
 footer {
   display: flex;
+  align-items: center;
   border: 1px solid #187506;
 }
