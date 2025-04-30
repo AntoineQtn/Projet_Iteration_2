@@ -1,5 +1,6 @@
 const container = document.getElementById('Brewery'); //création d'une variable 'container' corerspondant à l'id 'Brewery' du html
 const containerFormulaire = document.getElementById('zoneFormulaire');
+const deletePost = document.getElementById('deletePost');
 
 function getAPIBreweries() { //fonction utilisant la fonction fetch pour récupérer les données de l'API
   fetch('https://api.openbrewerydb.org/v1/breweries/random?size=10')
@@ -25,13 +26,29 @@ window.onclick = function (event) { //création de l'aspect cliquable du menu : 
     }
   }
 }
+window.onclick = function (event){
+  if(!event.target.matches('deletePost')){
+    deletePost.classList.contains('show');{
 
+    }
+      deletePost.classList.remove('show');
+    
+  }
+}
 const commentButton =
   document.getElementById('Formulaire');
 commentButton.addEventListener("click", function () {
   const zoneTexte = document.createElement('textarea');
   containerFormulaire.appendChild(zoneTexte);
+
 })
+
+/*const deletebtn = document.getElementById('deletePost');
+deletebtn.addEventListener("click", function () {
+  const deleteButton = document.createElement('button');
+  deletePost.appendChild(deleteButton);
+})*/
+
 
 const reloadButton = // création du bouton clickable de rechargement du feed
   document.getElementById('reloadBreweries');

@@ -52,6 +52,7 @@ header.form{
 
 main {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   border: 1px solid #a32404;
