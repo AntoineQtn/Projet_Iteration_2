@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        
+
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Dropdown</button>
             <div id="myDropdown" class="dropdown-content">
@@ -33,10 +33,14 @@
 création d'une section accueillant les informations de l'API avec une zone de texte et une photo-->
     <main>
         <h1>Breweries List</h1>
-        <div id="reloadBreweries"><button type="button">Reload</button></div>
-        <div id="formulairePost"><button type="button">Commentary</button></div>
-        <div id="commentaryWriting"></div>
-        <div id="commentaryLoad"></div>
+        
+        
+        <div id="formulairePost"><button type="submit">Commentary</button></div>
+        <form action="/ma-page-de-traitement" method="post">
+                <label for="msg"></label>
+                <textarea id="msg" name="user_message"></textarea>
+        </form>
+        <div id="reloadBreweries"><button type="button">Reload</button></div> <!--création du bouton de rechargement de l'API-->
         <div id="Brewery"></div>
     </main>
 

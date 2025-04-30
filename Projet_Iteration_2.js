@@ -43,7 +43,7 @@ function displayBreweries(breweries) { //fonction d'affichage des donnée de l'A
       <a href="${brewery.website_url}" target="_blank">Visit Website</a>
     `;
 //mise en page des propriétés de l'objet
-    container.appendChild(card);//Ajout des div card dans le block parent container
+    container.appendChild(card);//Ajout des div card dans le block parent création d'un formulaire container
   });
 }
 
