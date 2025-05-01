@@ -8,29 +8,31 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo du site">
-        </div>
-        <div class="dropdown">
-            <button onclick="affichageDropdown()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="Projet_Iteration_2_Accueil.html">Home</a>
-                <a href="Projet_Iteration_2_Gallery.html">Gallery</a>
-                <a href="Projet_Iteration_2_Jeux.html">Games</a>
+        <div id="hautdePage">
+            <div class="logo">
+                <img src="logo.png" alt="Logo du site">
             </div>
+            <div class="dropdown">
+                <button onclick="affichageDropdown()" class="dropbtn">Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="Projet_Iteration_2_Accueil.html">Home</a>
+                    <a href="Projet_Iteration_2_Gallery.html">Gallery</a>
+                    <a href="Projet_Iteration_2_Jeux.html">Games</a>
+                </div>
+            </div>
+
+            <a href="connexion.html"> <!--bouton de connexion, renvoi vers un formulaire d'identification-->
+                <button type="button" class="btn">Connection</button>
+            </a>
         </div>
-        <a href="connexion.html"> <!--bouton de connexion, renvoi vers un formulaire d'identification-->
-            <button type="button" class="btn">Connection</button>
-        </a>
-        <h1>Gallery</h1>
-        <!--Titre du site-->
-        <img src="">
-        <!--Logo du site-->
-
-
+        <h1>Find your Bro</h1>
     </header>
     <main>
-    
+    <div id="emplacementBtn">
+        <div id="deletePost"><button type="button" class="btn">Delete post</button></div><br>
+           
+    </div>
+    <div id="Gallery"></div>
     </main>
     <footer>
         <footer>
@@ -40,6 +42,6 @@
             </div>
         </footer>
     </footer>
-    <script src="Projet_Iteration_2.js"></script>
+    <script src="Gallery.js"></script>
 </body>
 </html>
