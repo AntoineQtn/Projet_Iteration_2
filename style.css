@@ -1,10 +1,27 @@
 header {
+  background-color: #a51919;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid #0917d6;
   gap: 1rem;
   padding: 1rem;
 }
-
+#hautdePage {
+  display: flex
+  
+}
+header h1 {
+  color: #fff;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+img {
+  width: 60%;
+  height: auto;
+}
 header.button{
   border: 1px solid #090b1b;
 }
@@ -51,23 +68,39 @@ header.form{
 }
 
 main {
+  background-color: #f0f1f0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   border: 1px solid #a32404;
 }
+#divButton {
+  display: flex;
+  
+  background-color: #1922a5;
+}
+#Brewery {
+  background-color: #9eca9d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
 
-brewery-card {
-  border: 1px solid #ddd;
+#Brewery div {
+  border: 5px solid #4e2c2c;
   padding: 16px;
   margin: 16px 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #f1bdbd;
 }
 
-.brewery-card h2 {
+#Brewery h2 {
+  background-color: #cc664c;
+  box-shadow: 12px 12px 2px 1px rgba(83, 7, 33, 0.2);
   margin-top: 0;
   font-size: 1.5em;
 }
@@ -96,8 +129,18 @@ brewery-card {
   
 }
 
-footer {
+#footer {
+  background-color: #a51919;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border: 1px solid #187506;
+}
+#footer img {
+  width: 50px;
+  height: auto;
+}
+#footer p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f0eeee;
 }

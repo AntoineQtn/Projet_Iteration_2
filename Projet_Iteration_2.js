@@ -57,7 +57,7 @@ function displayBreweries(breweries) { //fonction d'affichage des donnée de l'A
     <p>${brewery.brewery_type}</p>
     <p>${brewery.street}, ${brewery.city}, ${brewery.state}</p>
     <p>${brewery.phone}</p>
-    <a href="${brewery.website_url}" target="_blank">Visit Website</a>
+    <a href="${brewery.website_url}" target="_blank">Visit Website</a><br>
   `;
       //mise en page des propriétés de l'objet
       container.appendChild(card);//Ajout des div card dans le block parent création d'un formulaire container
