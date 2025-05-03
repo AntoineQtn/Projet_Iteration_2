@@ -43,9 +43,14 @@ function addPhoto() {
 addPhoto();
 
 function removePhoto() {
-  // Implementation goes here
+  const deleteBtn = document.getElementById('deletePost');
+  deleteBtn.addEventListener("click", function () {
+    if (containerPhoto.lastChild) {
+      containerPhoto.removeChild(containerPhoto.lastChild);
+    }
+  });
 }
-
+removePhoto();
 // Call getImage to test the functionality
 getImage();
 
