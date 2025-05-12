@@ -123,3 +123,30 @@ window.onclick = function (event) {//création de l'aspect cliquable du menu : s
   }
 }
 
+function modifyDisplay (disposition) {
+  const gallery = document.getElementById('Gallery');
+  if (disposition === 'flex') {
+    gallery.classList.remove('row');
+    gallery.classList.add('flex');
+  }else if ( disposition === 'row'){
+    gallery.classList.remove('flex');
+    gallery.classList.add('row');
+  }
+}
+
+function affichageDropdown2() {  //fonction affichant le menu déroulant du header
+  document.getElementById("myDropdown2").classList.toggle("show"); //récupération de la div 'myDropdown' du html, et utilisation de la propriété 'classList' et de la méthode toggle("show") pour afficher ou nom le menu déroulant
+}
+
+window.onclick = function (event) {//création de l'aspect cliquable du menu : si l'on clique sur le 'dropbtn' on accède aux possibilités de clics
+  if (!event.target.matches('.dropbtn2')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content2"); //récupération de la div 'dropdown-content' du html
+    var i; // création d'une variable i pour la boucle
+    for (i = 0; i < dropdowns.length; i++) { // boucle pour parcourir les éléments de la classe 'dropdown-content'
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) { //vérification de la présence de la classe 'show' dans la div 'dropdown-content'
+        openDropdown.classList.remove('show'); //si la classe 'show' est présente, elle est supprimée
+      }
+    }
+  }
+}

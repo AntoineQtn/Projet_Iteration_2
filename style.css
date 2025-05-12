@@ -8,27 +8,32 @@ header {
   gap: 1rem;
   padding: 1rem;
 }
+
 #hautdePage {
   display: flex
-  
 }
+
 header h1 {
   color: #fff;
   font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+
 img {
   width: 5rem;
   height: auto;
 }
-header.button{
+
+header.button {
   border: 1px solid #090b1b;
 }
-header.form{
+
+header.form {
   border: 1px solid #090b1b;
   color: #a51919;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -48,7 +53,7 @@ header.form{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -60,6 +65,41 @@ header.form{
 }
 
 .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn2 {
+  background-color: #1a311b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content2 button:hover {
   background-color: #f1f1f1;
 }
 
@@ -75,11 +115,13 @@ main {
   align-items: center;
   border: 1px solid #a32404;
 }
+
 #divButton {
   display: flex;
-  
+
   background-color: #1922a5;
 }
+
 #Brewery {
   background-color: #9eca9d;
   display: flex;
@@ -119,14 +161,14 @@ main {
 }
 
 .btn {
-  
-    background-color: #1a311b;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  
+
+  background-color: #1a311b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
 }
 
 #footer {
@@ -136,17 +178,34 @@ main {
   align-items: center;
   border: 1px solid #187506;
 }
+
 #footer img {
   width: 50px;
   height: auto;
 }
+
 #footer p {
   font-family: Arial, Helvetica, sans-serif;
   color: #f0eeee;
 }
+
 #emplacementBtn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+}
+
+#Gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+#Gallery.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#Gallery.row img {
+
 }

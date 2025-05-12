@@ -35,7 +35,12 @@
             <div id="deletePost"><button type="button" class="btn">Delete post</button></div><br>
             <div id="addPost"><button type="button" class="btn">Add post</button></div><br>
 
-            <div id="modifyDisplay"><button type="button" class="btn">Modify display</button></div><br>
+            <button onclick="affichageDropdown2()" class="dropbtn2">Modify Display</button>
+            <div id="myDropdown2" class="dropdown-content2">
+                <button onclick="modifyDisplay('flex')">Colonne</button>
+                <button onclick="modifyDisplay('row')">Mosaïque</button>
+            </div>
+
         </div>
         <div id="newPost"></div>
         <div id="Gallery"></div>
