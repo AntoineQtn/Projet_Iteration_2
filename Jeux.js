@@ -115,18 +115,45 @@ startGame();
 const plateau = [];
 const taillei = 7;
 const tailleJ = 9;
-function jeudelOie() {
+function displayJeuDeLOie() {
     const gameBoard2 = document.getElementById('game-board2');
+    let cellNumber = 1;
     for (let i = 0; i < taillei; i++) {
         plateau[i] = [];
         for (let j = 0; j < tailleJ; j++) {
             const cell2 = document.createElement('div');
             cell2.classList.add('cell2');
+            cell2.textContent = cellNumber;
             gameBoard2.appendChild(cell2);
+            cellNumber++;
         }
     }
 }
-jeudelOie();
+displayJeuDeLOie();
+
+const dice1 = Math.floor(Math.random() * 6) + 1;
+const dice2 = Math.floor(Math.random() * 6) + 1; // Génère un nombre aléatoire entre 1 et 6
+const player1Position = 0; // Position initiale du joueur 1
+const player2Position = 0; // Position initiale du joueur 2
+
+function movePlayer(player, steps) {
+    const playerPosition = player === 1 ? player1Position : player2Position;
+    const newPosition = playerPosition + steps;
+
+    if (newPosition > 63) {
+        alert(`Le joueur ${player} a gagné !`);
+        return;
+    }
+
+    const cell = document.querySelector(`.cell2:nth-child(${newPosition})`);
+    cell.classList.add(`player${player}`);
+}
+function rollDice() {
+    const dice1 = Math.floor(Math.random() * 6) + 1;
+    const dice2 = Math.floor(Math.random() * 6) + 1; // Génère un nombre aléatoire entre 1 et 6
+    movePlayer(1, dice1);
+    movePlayer(2, dice2);
+}
 
 // Fonction pour faire défiler la page vers le haut
 const goUpBtn = document.getElementById('goUpBtn'); // création d'une variable pour le goUpButton qui prend en compte le scrolling
@@ -163,3 +190,4 @@ window.onclick = function (event) {//création de l'aspect cliquable du menu : s
         }
     }
 }
+
