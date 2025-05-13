@@ -25,7 +25,7 @@ function displayPub(pub) { // fonction pour afficher les images de la pub
   pubContainer.innerHTML = ''; // vider le conteneur avant d'afficher la nouvelle image
   const cardPub = document.createElement('div'); // créer une nouvelle div pour la pub
   cardPub.innerHTML = ` 
-    <img src="${pub.url}" alt='Pub' style="width:100%"> 
+    <img src="${pub.url}" alt='Pub' class="pub-image"> 
   `; // ajouter l'image de la pub à la div
   pubContainer.appendChild(cardPub); // ajouter la div de la pub au conteneur
 }
@@ -48,7 +48,7 @@ function getImage() { // fonction pour récupérer les images de l'API Rick and 
   fetch("https://rickandmortyapi.com/api/character/")
     .then(res => res.json())
     .then(function (json) {
-      displayImage(json.results); 
+      displayImage(json.results);
     })
     .catch(error => console.error('Error fetching images:', error));
 }
@@ -89,7 +89,7 @@ removePhoto();
 getImage();
 
 const goUpBtn = document.getElementById('goUpBtn'); // création d'une variable pour le goUpButton qui prend en compte le scrolling
-window.onscroll = function () { 
+window.onscroll = function () {
   scrollFunction();
 };
 
@@ -102,7 +102,7 @@ function scrollFunction() { //création de la fonction scrollFunction qui permet
 }
 
 goUpBtn.addEventListener("click", function () { // ajout d'un événement au bouton 'goUpBtn' pour le faire remonter en haut de la page
-  document.body.scrollTop = 0; 
+  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0; //
 });
 
@@ -123,12 +123,12 @@ window.onclick = function (event) {//création de l'aspect cliquable du menu : s
   }
 }
 
-function modifyDisplay (disposition) {
+function modifyDisplay(disposition) {
   const gallery = document.getElementById('Gallery');
   if (disposition === 'flex') {
     gallery.classList.remove('row');
     gallery.classList.add('flex');
-  }else if ( disposition === 'row'){
+  } else if (disposition === 'row') {
     gallery.classList.remove('flex');
     gallery.classList.add('row');
   }
