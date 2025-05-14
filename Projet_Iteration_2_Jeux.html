@@ -33,9 +33,21 @@
         <h1>Démineur</h1>
         <div id="game-board"></div>
         <button id="restart" onclick="startGame()">Rejouer</button>
+
         <h1>Jeu de l'Oie</h1>
         <div id="game-board2"></div>
         <button id="roll-dice">Lancer le dé</button>
+        
+        <h1>Memory</h1>
+        <div class="dropdown3">
+                <button onclick="affichageDropdown()" class="dropbtn">Start</button>
+                <div id="myDropdown3" class="dropdown-content3">
+                    <button onclick="easyFetch()">Easy</button>
+                    <button onclick="mediumFetch()">Medium</button>
+                    <button onclick="hardFetch()">Hard</button>
+                </div>
+            </div>
+            <div id="cardContainer"></div>
     </main>
     <footer>
         <div id="footer">

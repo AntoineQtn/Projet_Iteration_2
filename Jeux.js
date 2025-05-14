@@ -190,4 +190,64 @@ window.onclick = function (event) {//création de l'aspect cliquable du menu : s
         }
     }
 }
+function affichageDropdown3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
 
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content3");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function fetchData(url) {
+    fetch(url)
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(function (json) {
+            console.log(json);
+            displayMemory(json.results);
+        })
+        .catch(error => console.error('Error fetching images:', error));
+}
+
+function easyFetch() {
+    fetchData("https://mocki.io/v1/f2dffcdc-366c-45b5-9e26-cd30f216c2c2");
+}
+
+function mediumFetch() {
+    fetchData("https://mocki.io/v1/7157c0f5-3659-4a0c-836f-122146c49a6a");
+}
+
+function hardFetch() {
+    fetchData("https://mocki.io/v1/93c7707f-18d8-4bf9-a5dd-b0984beb1004");
+}
+
+const cardContainer = document.getElementById('cardcontainer');
+
+function displayMemory(Cards) {
+    cardContainer.innerHTML = '';
+    Cards.forEach(card => {
+        const cardImages = document.createElement('div');
+        cardImages.innerHTML = `
+            <img src="${card.image}" alt="${card.name}" style="width:100%">
+        `;
+        cardContainer.appendChild(cardImages);
+    });
+}
+
+// Exemple d'appel de fonction en réponse à un événement utilisateur
+document.getElementById('easyButton').addEventListener('click', easyFetch);
+document.getElementById('mediumButton').addEventListener('click', mediumFetch);
+document.getElementById('hardButton').addEventListener('click', hardFetch);
